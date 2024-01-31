@@ -1,0 +1,80 @@
+*{
+    background-color: rgb(223, 245, 252);
+}
+
+
+
+h1{
+    font-size: 30px;
+    color: salmon;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.PageName{
+    display: flex;
+    margin: 1px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.logo1{
+    height:150px;
+    width:150px; 
+    position: relative;
+    top: 80%;
+    
+}
+
+
+.mainPage{
+    position: absolute;
+    right: 39%;
+    top: 10%;
+    font-size: 20px;
+    background-color: #ffd0b9;   
+    
+}
+
+
+a{
+    text-decoration: none;
+    color: lightsalmon;
+    font-size: 22px;
+    padding: 5px;
+}
+a:hover{
+    color: crimson;
+    border: rgb(164, 188, 255);
+    
+}
+
+.banner{
+    width: 100%;
+    height: 90%;
+    background-color: #ffefe8;
+}
+
+.banerBox {
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffefe8;
+    border: solid 5px;
+    width:1000px;
+
+    border-color: cadetblue;
+}
+
+.baner{
+    background-color: #ffefe8;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
