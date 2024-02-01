@@ -1,80 +1,233 @@
-*{
-    background-color: rgb(223, 245, 252);
-}
-
-
-
-h1{
-    font-size: 30px;
-    color: salmon;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-.PageName{
-    display: flex;
-    margin: 1px;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 25px;
-}
-
-.logo1{
-    height:150px;
-    width:150px; 
-    position: relative;
-    top: 80%;
-    
-}
-
-
-.mainPage{
-    position: absolute;
-    right: 39%;
-    top: 10%;
+* {
+    box-sizing: border-box;
+    margin: 0;
     font-size: 20px;
-    background-color: #ffd0b9;   
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(187, 190, 255);
 }
 
 
-a{
+
+
+/* ------------- HEADER -------------*/
+  
+.separador1{
+    height: 150px; 
+    background-color: rgb(187, 190, 255);
+    grid-row: 2;
+}
+
+
+.mainMenu {
+
+    align-items: center;
+    height: 85px;
+    background-color: #3b4487;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainMenu .logo1 {
+    cursor: pointer;
+}
+
+.mainMenu .logo1 img {
+    height: 150px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.mainMenu .logo1 img:hover {
+    transform: scale(1.2);
+}
+
+.mainMenu .nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainMenu .nav-menu li {
+    grid: 0;
+    gap: 20px;
+}
+
+.mainMenu .nav-menu li:hover {
+    transform: scale(1.1);
+}
+
+.mainMenu .nav-menu a {
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #c190fc;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: lightsalmon;
-    font-size: 22px;
-    padding: 5px;
-}
-a:hover{
-    color: crimson;
-    border: rgb(164, 188, 255);
-    
 }
 
-.banner{
-    width: 100%;
-    height: 90%;
-    background-color: #ffefe8;
+.mainMenu .nav-menu li a:hover {
+    color: #ff5a0e;
 }
 
-.banerBox {
+
+/* ------------- BANNER -------------  */
+
+.frase1{
+    color: #ff622d;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 200px;
+}
+
+.bannerCont {
+    display: grid;
+    height: 250px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .banner {
+    /* background-color: #63469960; */
+    grid-column: span 1;
+    grid-row: 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: stretch;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner img {
+    width: 80%;
+    height: 96%;
+  }
+
+
+/* ------------- SHOWCASE -------------  */
+
+
+.showcaseContainer{
+    text-align: center;
+    margin: 1px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.showcaseMain 
+{
+    text-align: center;
+    grid-template-columns: auto;
+    margin: 400px 200px;
+    width: 80%;
+}
+.frase2
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    background-color: #3b4487;
+    color: #ff7143;
+}
+
+.showcase1
+{
+    display: grid;
+    gap: 3rem;
+    font-size: 25px;
+    margin: 0 70px 0 70px;
+    color: #fff;
+}
+.swGametitle
+{
+    text-align: center;
+    font-size: 30px;
+    color: #ff7143;
+}
+
+/* IMAGENES DE SHOWCASE */
+.showcase1 img
+{
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.showcaseContainer .showcase1 {
+    cursor: pointer;
+}
+
+.showcaseContainer .showcase1 img {
+    width: auto;
+    transition: all 0.3s;
+}
+
+.showcaseContainer .showcase1 img:hover {
+    transform: scale(1.2);
+}
+
+/* ----------- FOOTER --------------- */
+
+.extraShowcase {
     margin: auto;
-    width: 40%;
-    height: 30%;
+    width: 80%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: #ffefe8;
-    border: solid 5px;
-    width:1000px;
-
-    border-color: cadetblue;
+    background-color: #4750a3;
+    padding: 5rem;
+    border: double 10px
 }
 
-.baner{
+.fiveT{
     background-color: #ffefe8;
     font-size: 50px;
     font-weight: 500;
 }
 
 
+
+@media screen and (max-width: 768px) {
+    .mainMenu {
+        flex-wrap: 5px 5%;
+        flex-direction: column;
+        height: auto;
+        width: 40px;
+        align-items: flex-start;
+    }
+
+    .mainMenu .logo1 img {
+        position: relative;
+        left: 20%;
+        align-items: center;
+        height: 230px;
+    }
+
+    .mainMenu .nav-menu {
+        margin-top: 10px;
+    }
+
+    .mainMenu .nav-menu li {
+        padding: 10px 0;
+    }
+
+      
+}
