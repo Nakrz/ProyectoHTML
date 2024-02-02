@@ -1,12 +1,11 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    background-color: rgb(187, 190, 255);
+    background-color: #3b4487;
 }
 
 
@@ -15,19 +14,20 @@ body {
 /* ------------- HEADER -------------*/
   
 .separador1{
-    height: 150px; 
-    background-color: rgb(187, 190, 255);
+    height: 110px; 
+    background-color: rgb(71, 77, 186);
+    border: solid #ff9143;
     grid-row: 2;
 }
 
 
 .mainMenu {
-
     align-items: center;
-    height: 85px;
+    height: auto; 
     background-color: #3b4487;
     display: flex;
     justify-content: space-between;
+    padding: 10px 20px; 
 }
 
 .mainMenu .logo1 {
@@ -35,8 +35,7 @@ body {
 }
 
 .mainMenu .logo1 img {
-    height: 150px;
-    width: auto;
+    height: 90px; 
     transition: all 0.3s;
 }
 
@@ -44,26 +43,32 @@ body {
     transform: scale(1.2);
 }
 
+.menu-icon {
+    display: none; 
+}
+
+.mainMenu nav {
+    display: flex;
+    align-items: center;
+}
+
 .mainMenu .nav-menu {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0; 
 }
 
 .mainMenu .nav-menu li {
-    grid: 0;
-    gap: 20px;
+    margin: 5px; 
 }
 
-.mainMenu .nav-menu li:hover {
-    transform: scale(1.1);
-}
 
 .mainMenu .nav-menu a {
     color: #1b3039;
     padding: 9px 25px;
-    background: #c190fc;
+    background: #d6caff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -79,10 +84,10 @@ body {
 /* ------------- BANNER -------------  */
 
 .frase1{
-    color: #ff622d;
+    color: #ff9143;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 200px;
+    font-size: 20px;
 }
 
 .bannerCont {
@@ -143,7 +148,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     background-color: #3b4487;
-    color: #ff7143;
+    color: #ff9143;
 }
 
 .showcase1
@@ -158,7 +163,7 @@ body {
 {
     text-align: center;
     font-size: 30px;
-    color: #ff7143;
+    color: #ff9143;
 }
 
 /* IMAGENES DE SHOWCASE */
@@ -205,29 +210,38 @@ body {
 
 
 
-@media screen and (max-width: 768px) {
-    .mainMenu {
-        flex-wrap: 5px 5%;
-        flex-direction: column;
-        height: auto;
-        width: 40px;
-        align-items: flex-start;
-    }
+@media screen and (max-width: 768px)
 
-    .mainMenu .logo1 img {
-        position: relative;
-        left: 20%;
-        align-items: center;
-        height: 230px;
-    }
-
+{
     .mainMenu .nav-menu {
-        margin-top: 10px;
+        display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #3b4487;
+        padding: 10px;
     }
 
-    .mainMenu .nav-menu li {
-        padding: 10px 0;
+    .mainMenu .nav-menu.active {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
     }
 
-      
+    .menu-icon {
+        display: block; 
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mainMenu nav {
+        position: relative;
+    }
+
+    .mainMenu label {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 }

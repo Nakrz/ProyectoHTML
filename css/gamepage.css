@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c1c6f8;
+}
+
+
+
+/* ------------- HEADER -------------*/
+  
+.separador1 {
+    height: 150px; 
+    background-color: rgb(187, 190, 255);
+    grid-row: 2;
+}
+
+.mainMenu {
+    align-items: center;
+    height: auto; 
+    background-color: #3b4487;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; 
+}
+
+.mainMenu .logo1 {
+    cursor: pointer;
+}
+
+.mainMenu .logo1 img {
+    height: 90px; 
+    transition: all 0.3s;
+}
+
+.mainMenu .logo1 img:hover {
+    transform: scale(1.2);
+}
+
+.menu-icon {
+    display: none; 
+}
+
+.mainMenu nav {
+    display: flex;
+    align-items: center;
+}
+
+.mainMenu .nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; 
+}
+
+.mainMenu .nav-menu li {
+    margin: 5px; 
+}
+
+
+.mainMenu .nav-menu a {
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #d6caff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.mainMenu .nav-menu li a:hover {
+    color: #ff5a0e;
+}
+
+
+
+/* DESCRIPCION E IMAGENES DEL JUEGO */
+
+.imgContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.descripcionProducto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.miniaturas {
+    flex: 1 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.miniatura {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.imagenJuego {
+    flex: 1 0 70%;
+    margin-right: 20px;
+}
+
+.imagenJuego img {
+    width: 101%;
+    display: block;
+    border: 5px solid #050505;
+    border-radius: 4px;
+    
+}
+
+.infoJuego {
+    flex: 1 0 30%;
+}
+
+.reseñas {
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .mainMenu .nav-menu {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #3b4487;
+        padding: 10px;
+    }
+
+    .mainMenu .nav-menu.active {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block; 
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mainMenu nav {
+        position: relative;
+    }
+
+    .mainMenu label {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+
+    
+
+    .descripcionProducto {
+        flex-direction: column;
+    }
+
+    .imagenJuego {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .miniaturas {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .miniatura {
+        width: 48%;
+
+    }
+}
