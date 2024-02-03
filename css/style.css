@@ -1,14 +1,11 @@
 * {
     box-sizing: border-box;
+    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
     background-color: #3b4487;
-}
-
-a{
-    text-decoration: none;
 }
 
 
@@ -17,17 +14,18 @@ a{
 /* ------------- HEADER -------------*/
   
 .separador1{
-    height: 190px; 
-    background-color: rgb(71, 77, 186);
-    border: solid #ff9143;
-    grid-row: 2;
+    text-align: center;
+    border: 2px solid rgb(255, 163, 77);
+    /* background-color: rgb(71, 77, 186);; */
+    max-width: 100%;
+    padding: 20px;
 }
 
 
 .mainMenu {
     align-items: center;
     height: auto; 
-    background-color: #3b4487;
+    background-color: #4b43a2;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px; 
@@ -90,108 +88,89 @@ a{
     color: #ff9143;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 21px;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.bannerCont {
+
+.banner {
     display: grid;
-    height: 250px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-  
-  .banner {
-    /* background-color: #63469960; */
-    grid-column: span 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: stretch;
+    place-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
 
-    justify-content: center;
-    align-items: center;
-  }
-
-  .banner img {
+.banner img {
     width: 100%;
-    display: block; 
-  }
-
+    height: auto;
+}
 
 /* ------------- SHOWCASE -------------  */
 
 
-.showcaseContainer{
-    text-align: center;
-    margin: 1px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.showcaseMain 
-{
-    text-align: center;
-    margin:450px 50px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: flex-end;
-    align-items: center;
-}
 .frase2
 {
-
     text-align: center;
     font-size: 30px;
+    font-weight: 800;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
-    background-color: #3b4487;
+    border: solid 2px;
+    /* background-color: rgb(71, 77, 186);; */
+    padding: 10px 20px;
     color: #ff9143;
 }
 
-
-.showcase1
-{
-    display: grid;
-    gap: 3rem;
-    font-size: 25px;
-    margin: 0 70px 0 70px;
-    color: #fff;
-}
-.swGametitle
-{
-    text-align: center;
-    font-size: 30px;
-    color: #ff9143;
-}
-
-/* IMAGENES DE SHOWCASE */
-.showcase1 img
-{
-    max-width: 200px;
-    display: block;
+.showContainer {
+    max-width: 90%; 
     margin: 0 auto;
+    padding: 20px;
 }
 
-.showcaseContainer .showcase1 {
-    cursor: pointer;
+.juegosShowcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: start;
+    justify-items: center;
+    margin-top: 80px;
 }
 
-.showcaseContainer .showcase1 img {
-    width: auto;
-    transition: all 0.3s;
+.showcase1 {
+    padding: 15px; 
+    text-align: center;
+    max-width: 300px; 
+    transition: all 0.3s ease; 
 }
 
-.showcaseContainer .showcase1 img:hover {
+.showcase1:hover {
     transform: scale(1.2);
 }
+
+.showcase1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.showcase1 .info {
+    margin-top: 10px;
+}
+
+.showcase1 .info h2 {
+    margin-bottom: 5px;
+    color: #fb9c49;
+}
+
+.showcase1 .info p {
+    margin-bottom: 5px;
+}
+
+
+
+
 
 /* ----------- FOOTER --------------- */
 
