@@ -1,24 +1,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #c1c6f8;
+    background-color: #272553;
 }
 
 
 
-/* ------------- HEADER -------------*/
+/* ------------- HEADER Y LOGO -------------*/
   
-.separador1 {
-    height: 150px; 
-    background-color: rgb(187, 190, 255);
-    grid-row: 2;
-}
 
 .mainMenu {
     align-items: center;
     height: auto; 
-    background-color: #3b4487;
+    background-color: #4b43a2;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px; 
@@ -36,6 +30,9 @@ body {
 .mainMenu .logo1 img:hover {
     transform: scale(1.2);
 }
+
+
+/* OPCIONES DE NAVBAR */
 
 .menu-icon {
     display: none; 
@@ -55,23 +52,30 @@ body {
 }
 
 .mainMenu .nav-menu li {
-    margin: 5px; 
+    margin: 10px; 
 }
 
 
 .mainMenu .nav-menu a {
-    color: #1b3039;
-    padding: 9px 25px;
-    background: #d6caff;
-    border: none;
-    border-radius: 50px;
+    font-size: 20px;
+    color: #edccff;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     text-decoration: none;
 }
 
 .mainMenu .nav-menu li a:hover {
-    color: #ff5a0e;
+    color: #ff793a;
+}
+
+/* SEPARADOR */
+
+.separador1{
+    text-align: center;
+    /* border: 2px solid rgb(255, 163, 77); */
+    background-color: rgb(7, 2, 30);;
+    max-width: 100%;
+    padding: 20px;
 }
 
 
@@ -92,17 +96,21 @@ body {
 .miniaturas {
     flex: 1 0 20%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
 .miniatura {
     width: 80%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
 }
+
 
 .imagenJuego {
     flex: 1 0 70%;
     margin-right: 20px;
+    
 }
 
 .imagenJuego img {
@@ -110,17 +118,212 @@ body {
     display: block;
     border: 5px solid #050505;
     border-radius: 4px;
-    
+
 }
 
 .infoJuego {
     flex: 1 0 30%;
+    margin-left: 10px;
+    
 }
 
-.reseñas {
+.infoJuego h1{
+    color: #ff5a0e;
+}
+
+.infoJuego h2 {
+    color: #ff5a0e;
+}
+
+
+.reseñas h2{
+    margin-top: 100px;
+    font-size: 25px;
+    color: #ff5a0e;
+    
+}
+
+.reseñas h4{
+    color: #ff5a0e;
+}
+
+.reseñas p{
+   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.imagenJuego {
+    flex: 1 0 70%;
+    margin-right: 20px;
+    flex-direction: column;
+    position: relative; 
+}
+
+/* ---------- PRECIOS DEL JUEGO ----------*/
+
+.precios {
+    margin-right: -16px;
+    background-color: rgba(0, 0, 0, 0.285);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fffdff;
+    margin-top: auto; 
+    align-self: flex-start; 
+}
+
+.disponibilidad {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px; 
+}
+
+.btnCompra {
+    background-color: #ff5a0e;
+    color: #fff;
+    border: 2px solid #d6caff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; 
+    margin-top: 10px; 
+}
+
+
+/* ---------- PODRIA GUSTARTE --------- */
+
+.sugerencias {
     margin-top: 20px;
 }
 
+.sugerencias h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff5a0e;
+}
+
+
+.sugerenciaJuego {
+    display: inline-block;
+    width: calc(25% - 20px); 
+    margin: 0 10px 20px;
+    text-align: center;
+}
+
+.sugerenciaJuego img {
+    border: solid #504ca3;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    
+}
+
+.sugerenciaJuego h3 {
+    font-size: 16px;
+    margin: 0;
+    
+}
+
+
+
+
+/* -----------  PARTE DEL FOOTER  --------------- */
+
+
+
+.gameFooter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: #4b43a2;
+    color: #fff;
+    padding: 20px;
+}
+
+.seccion {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.seccion h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff9557;
+}
+
+.seccion ul a{
+    font-size: large;
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(234, 211, 252);
+    
+}
+
+
+.seccion ul li a{
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+
+}
+
+.seccion ul li:hover {
+    color: #fb9c49;
+    transform: scale(1.05);
+    
+}
+
+
+/* --------------- REDES SOCIALES --------------- */
+
+.social {
+    text-align: center;
+}
+
+
+.redes {
+    display: flex;
+    justify-content: center;
+}
+
+.redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4b43a2;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+}
+
+.redes img{
+    width: 80%;
+    height: auto;
+    display: block;
+
+}
+
+
+.redes a:hover {
+    transform: scale(1.4);
+}
+
+.redes a i {
+    font-size: 20px;
+}
+
+/* ----------------- MEDIAQUERIES -------------- */
 
 
 @media (max-width: 768px) {
@@ -158,8 +361,6 @@ body {
     }
 
 
-    
-
     .descripcionProducto {
         flex-direction: column;
     }
@@ -171,7 +372,7 @@ body {
 
     .miniaturas {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .miniatura {

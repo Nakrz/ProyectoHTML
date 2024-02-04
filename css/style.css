@@ -1,26 +1,19 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    background-color: #3b4487;
+    background-color: #272553;
+}
+
+a{
+    text-decoration: none;
 }
 
 
-
-
-/* ------------- HEADER -------------*/
+/* ------------- HEADER Y LOGO -------------*/
   
-.separador1{
-    text-align: center;
-    border: 2px solid rgb(255, 163, 77);
-    /* background-color: rgb(71, 77, 186);; */
-    max-width: 100%;
-    padding: 20px;
-}
-
 
 .mainMenu {
     align-items: center;
@@ -44,6 +37,9 @@ body {
     transform: scale(1.2);
 }
 
+
+/* OPCIONES DE NAVBAR */
+
 .menu-icon {
     display: none; 
 }
@@ -62,30 +58,39 @@ body {
 }
 
 .mainMenu .nav-menu li {
-    margin: 5px; 
+    margin: 10px; 
 }
 
 
 .mainMenu .nav-menu a {
-    color: #1b3039;
-    padding: 9px 25px;
-    background: #d6caff;
-    border: none;
-    border-radius: 50px;
+    font-size: 20px;
+    color: #edccff;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     text-decoration: none;
 }
 
 .mainMenu .nav-menu li a:hover {
-    color: #ff5a0e;
+    color: #ff793a;
 }
+
+/* SEPARADOR */
+
+.separador1{
+    text-align: center;
+    /* border: 2px solid rgb(255, 163, 77); */
+    background-color: rgb(7, 2, 30);;
+    max-width: 100%;
+    padding: 20px;
+}
+
 
 
 /* ------------- BANNER -------------  */
 
+
 .frase1{
-    color: #ff9143;
+    color: salmon;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px;
@@ -169,31 +174,159 @@ body {
 }
 
 
+/* --------------- AQUI VAN LOS ICONOS DE LOS LAUNCHERS --------------- */
+
+.launchers {
+    margin-top: 10px;
+}
+
+.launchers img {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px;
+}
 
 
+
+/* --------------- TERCERA SECCION OSEA DONDE VAN LOS NUEVOS JUEGOS JEJE --------------- */
+
+
+.novedadesJuegos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+.mainTekken {
+    width: 100%;
+}
+  
+.tekkenIMG {
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+}
+  
+.tkkDesc {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px
+}
+
+  
+.botonMirar {
+    display: inline-block;
+    width: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ff5a0e;
+    color: #eedaff;
+    border: 2px solid #d6caff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+  
 
 /* ----------- FOOTER --------------- */
 
-.extraShowcase {
-    margin: auto;
-    width: 80%;
+
+
+.gameFooter {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: #4b43a2;
+    color: #fff;
+    padding: 20px;
+}
+
+.seccion {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.seccion h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff9557;
+}
+
+.seccion ul a{
+    font-size: large;
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(234, 211, 252);
+    
+}
+
+
+.seccion ul li a{
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+
+}
+
+.seccion ul li:hover {
+    color: #fb9c49;
+    transform: scale(1.05);
+    
+}
+
+
+/* --------------- REDES SOCIALES --------------- */
+
+.social {
     text-align: center;
+}
+
+
+.redes {
+    display: flex;
     justify-content: center;
+}
+
+.redes a {
+    display: inline-flex;
     align-items: center;
-    background-color: #4750a3;
-    padding: 5rem;
-    border: double 10px
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4b43a2;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
 }
 
-.fiveT{
-    background-color: #ffefe8;
-    font-size: 50px;
-    font-weight: 500;
+.redes img{
+    width: 80%;
+    height: auto;
+    display: block;
+
 }
 
 
+.redes a:hover {
+    transform: scale(1.4);
+}
+
+.redes a i {
+    font-size: 20px;
+}
+
+
+
+/* --------------- MEDIAQUERIES --------------- */
 
 @media screen and (max-width: 768px)
 
@@ -230,3 +363,11 @@ body {
         right: 20px;
     }
 }
+
+
+/* --------------- ESTO ES PARA LA SECCION DE LA IMAGEN DE TEKKEN --------------- */
+@media (min-width: 768px) {
+    .novedadesJuegos {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
