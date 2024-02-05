@@ -4,10 +4,23 @@ body {
     background-color: #272553;
 }
 
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 
+
+body {
+    background-color: #272553;
+}
+
+a{
+    text-decoration: none;
+}
 
 /* ------------- HEADER Y LOGO -------------*/
-  
 
 .mainMenu {
     align-items: center;
@@ -18,57 +31,73 @@ body {
     padding: 10px 20px; 
 }
 
-.mainMenu .logo1 {
+
+header {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: #4b43a2;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+header .logo1 {
     cursor: pointer;
 }
 
-.mainMenu .logo1 img {
-    height: 90px; 
+header .logo1 img {
+    height: 120px; 
     transition: all 0.3s;
 }
 
-.mainMenu .logo1 img:hover {
-    transform: scale(1.2);
+header .logo1 img:hover {
+    transform: scale(1.1);
 }
 
 
-/* OPCIONES DE NAVBAR */
 
-.menu-icon {
-    display: none; 
-}
+/* -------- OPCIONES DE NAVBAR -------- */
 
-.mainMenu nav {
+
+header nav ul {
     display: flex;
-    align-items: center;
 }
 
-.mainMenu .nav-menu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0; 
-}
-
-.mainMenu .nav-menu li {
-    margin: 10px; 
-}
-
-
-.mainMenu .nav-menu a {
+header nav ul li a {
+    display: inline-block;
     font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #edccff;
+    padding: 5px 0;
+    margin: 0 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    text-decoration: none;
+    
 }
 
-.mainMenu .nav-menu li a:hover {
+header nav ul li a:hover {
     color: #ff793a;
 }
 
-/* SEPARADOR */
+
+.rayitas {
+    cursor: pointer;
+    display: none;
+}
+
+.rayitas div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #ff793a;
+}
+
+
+
+
+/* ----------- SEPARADOR ---------- */
 
 .separador1{
     text-align: center;
@@ -137,6 +166,7 @@ body {
 
 
 .reseñas h2{
+    padding: 15px;
     margin-top: 100px;
     font-size: 25px;
     color: #ff5a0e;
@@ -144,11 +174,12 @@ body {
 }
 
 .reseñas h4{
+    padding: 15px;
     color: #ff5a0e;
 }
 
 .reseñas p{
-   
+    padding: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -176,7 +207,7 @@ body {
 .disponibilidad {
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-top: 10px; 
+    margin-top: 20px; 
 }
 
 .btnCompra {
@@ -227,10 +258,6 @@ body {
     
 }
 
-
-
-
-/* -----------  PARTE DEL FOOTER  --------------- */
 
 
 
@@ -292,6 +319,7 @@ body {
     justify-content: center;
 }
 
+
 .redes a {
     display: inline-flex;
     align-items: center;
@@ -301,11 +329,11 @@ body {
     border-radius: 50%;
     background-color: #4b43a2;
     margin: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
     overflow: hidden;
     transition: all 0.3s ease;
 
 }
+
 
 .redes img{
     width: 80%;
@@ -326,39 +354,40 @@ body {
 /* ----------------- MEDIAQUERIES -------------- */
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
 
-    .mainMenu .nav-menu {
-        display: none; 
+@media screen and (max-width: 700px) {
+    .rayitas {
+        display: block;
+    }
+
+    header nav {
         position: absolute;
-        top: 60px;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #4b43a2;
+        padding: 30px;
+        transition: 0.3s ease-in-out;
+    }
+
+    header #nav_check:checked ~ nav {
         left: 0;
-        right: 0;
-        background-color: #3b4487;
-        padding: 10px;
     }
 
-    .mainMenu .nav-menu.active {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
+    header nav ul {
+        display: block;
     }
 
-    .menu-icon {
-        display: block; 
-        font-size: 24px;
-        cursor: pointer;
+    header nav ul li a {
+        margin: 5px;
     }
 
-    .mainMenu nav {
-        position: relative;
-    }
-
-    .mainMenu label {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
 
 
     .descripcionProducto {

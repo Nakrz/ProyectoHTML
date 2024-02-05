@@ -89,160 +89,106 @@ header nav ul li a:hover {
 }
 
 
-/* ----------- SEPARADOR ---------- */
 
-.separador1{
-    text-align: center;
-    /* border: 2px solid rgb(255, 163, 77); */
-    background-color: rgb(7, 2, 30);;
-    max-width: 100%;
-    padding: 20px;
+/* -------- OPCIONES DE NAVBAR -------- */
+
+
+header nav ul {
+    display: flex;
 }
 
-
-
-/* ------------- BANNER -------------  */
-
-
-.frase1{
-    color: salmon;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-.banner {
-    display: grid;
-    place-items: center;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-}
-
-/* ------------- SHOWCASE -------------  */
-
-
-.frase2
-{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 800;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: oblique;
-    border: solid 2px;
-    /* background-color: rgb(71, 77, 186);; */
-    padding: 10px 20px;
-    color: #ff9143;
-}
-
-.showContainer {
-    max-width: 90%; 
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.juegosShowcase {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 20px;
-    justify-content: space-between;
-    align-content: center;
-    align-items: start;
-    justify-items: center;
-    margin-top: 80px;
-}
-
-.showcase1 {
-    padding: 15px; 
-    text-align: center;
-    max-width: 300px; 
-    transition: all 0.3s ease; 
-}
-
-.showcase1:hover {
-    transform: scale(1.2);
-}
-
-.showcase1 img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-.showcase1 .info h2 {
-    margin-bottom: 5px;
-    color: #fb9c49;
-}
-
-
-
-/* --------------- AQUI VAN LOS ICONOS DE LOS LAUNCHERS --------------- */
-
-.launchers {
-    margin-top: 10px;
-}
-
-.launchers img {
-    width: 40px; 
-    height: auto;
-    margin-right: 10px;
-}
-
-
-
-/* --------------- TERCERA SECCION OSEA DONDE VAN LOS NUEVOS JUEGOS JEJE --------------- */
-
-
-.novedadesJuegos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-.mainTekken {
-    width: 100%;
-}
-  
-.tekkenIMG {
-    width: 100%;
-    max-width: 100%; 
-    height: auto;
-}
-  
-.tkkDesc {
-    width: 100%;
-    text-align: center;
-    margin-top: 50px
-}
-
-  
-.botonMirar {
+header nav ul li a {
     display: inline-block;
-    width: 120px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 100px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #edccff;
+    padding: 5px 0;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+}
+
+header nav ul li a:hover {
+    color: #ff793a;
+}
+
+
+.rayitas {
+    cursor: pointer;
+    display: none;
+}
+
+.rayitas div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #ff793a;
+}
+
+
+
+/* ----------CARRITOOOOO---------- */
+
+
+header {
+
     padding: 20px;
     text-align: center;
-    background-color: #ff5a0e;
-    color: #eedaff;
-    border: 2px solid #d6caff;
-    text-decoration: none;
+}
+
+.contenido {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.producto {
+    width: 200px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
     border-radius: 5px;
 }
 
-  
+.total {
+    text-align: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-/* ----------- FOOTER --------------- */
+button {
+    background-color: #fb7e3a; /* Verde */
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+button:hover {
+    background-color: #f96d2d; 
+}
 
+footer {
+
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ----------CARRITOOOOO---------- */
+
+/* ----------- FOOTER ------------------ */
 
 .gameFooter {
     display: grid;
@@ -302,7 +248,6 @@ header nav ul li a:hover {
     justify-content: center;
 }
 
-
 .redes a {
     display: inline-flex;
     align-items: center;
@@ -317,7 +262,6 @@ header nav ul li a:hover {
     transition: all 0.3s ease;
 
 }
-
 
 .redes img{
     width: 80%;
@@ -334,6 +278,7 @@ header nav ul li a:hover {
 .redes a i {
     font-size: 20px;
 }
+
 
 
 /* --------------- MEDIAQUERIES --------------- */
@@ -372,10 +317,3 @@ header nav ul li a:hover {
         margin: 5px;
     }
 }
-
-/* --------- ESTO ES PARA LA SECCION DE LA IMAGEN DE TEKKEN ---------- */
-@media (min-width: 768px) {
-    .novedadesJuegos {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
